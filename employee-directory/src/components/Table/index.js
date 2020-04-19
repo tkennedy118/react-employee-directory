@@ -1,16 +1,21 @@
 import React from 'react';
 
 function Table(props) {
-  
+
   const employeeList = () => {
+    console.log('PROPS.ORDERBY: ', props.orderBy);
     const employees = props.employees;
     let filteredEmployees = employees;
 
+    // Apply filters.
     if (props.filterPosBy !== 'none') {
       filteredEmployees = employees.filter(employee => {
-        employee.position === props.filterPosBy
+        return employee.position === props.filterPosBy;
       });
     }
+
+    // Apply sorting.
+    filteredEmployees.sort((first, second) => (first[props.orderBy] > second[props.orderBy]) ? 1 : -1);
 
     return filteredEmployees.map(employee => (
       <tr key={employee.id}>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { render } from 'react-dom';
 import employees from '../utils/employees';
 import Container from '../components/Container/index';
 import Row from '../components/Row/index';
@@ -8,7 +7,7 @@ import Table from '../components/Table/index';
 import Button from '../components/Button/index';
 
 function Home() {
-  const [orderBy, setOrderBy] = useState('position');
+  const [orderBy, setOrderBy] = useState('id');
   const [filterPosBy, setFilterPosBy] = useState('none');
   
   const handleButtonClick = (action, actionBy) => {
