@@ -3,6 +3,9 @@ import React from 'react';
 function Table(props) {
   console.log('PROPS: ', props);
   const employeeList = () => {
+    // if (props.filterBy !== 'none') {
+    //   const filteredEmployees = props.employees.filter(employee => employee.)
+    // }
     return props.employees.map(employee => (
       <tr key={employee.id}>
         <th scope='row'>{employee.id}</th>
