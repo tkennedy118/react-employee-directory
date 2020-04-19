@@ -1,12 +1,18 @@
 import React from 'react';
 
 function Table(props) {
-  console.log('PROPS: ', props);
+  
   const employeeList = () => {
-    // if (props.filterBy !== 'none') {
-    //   const filteredEmployees = props.employees.filter(employee => employee.)
-    // }
-    return props.employees.map(employee => (
+    const employees = props.employees;
+    let filteredEmployees = employees;
+
+    if (props.filterPosBy !== 'none') {
+      filteredEmployees = employees.filter(employee => {
+        employee.position === props.filterPosBy
+      });
+    }
+
+    return filteredEmployees.map(employee => (
       <tr key={employee.id}>
         <th scope='row'>{employee.id}</th>
         <td>{employee.fname}</td>

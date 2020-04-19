@@ -8,12 +8,10 @@ import Table from '../components/Table/index';
 import Button from '../components/Button/index';
 
 function Home() {
-  console.log('EMPLOYEES: ', employees);
   const [orderBy, setOrderBy] = useState('position');
   const [filterPosBy, setFilterPosBy] = useState('none');
   
   const handleButtonClick = (action, actionBy) => {
-    console.log('INSIDE HANDLEBUTTONCLICK');
     if (action !== 'order' && action !== 'filter') { return };
 
     (action === 'order') ? setOrderBy(actionBy) : setFilterPosBy(actionBy);
@@ -54,7 +52,8 @@ function Home() {
           <Button handleButtonClick={handleButtonClick} text='Sort By Last Name' theme='primary' action='order' actionBy='lname'></Button>
         </Col>
         <Col size='md-6'>
-          {renderFilterPosButtons()};
+          {renderFilterPosButtons()}
+          <Button handleButtonClick={handleButtonClick} text={`No Filter`} theme='primary' action='filter' actionBy='none'></Button>
         </Col>
       </Row>
     </Container>
