@@ -1,0 +1,25 @@
+h2 {
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.jumbo {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.no-jumbo {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: -32px;
+  margin-bottom: 0px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.rainbow-text {
+  background: linear-gradient(to left, red, orange, yellow, green, blue, indigo);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

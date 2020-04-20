@@ -3,7 +3,6 @@ import React from 'react';
 function Table(props) {
 
   const employeeList = () => {
-    console.log('PROPS.ORDERBY: ', props.orderBy);
     const employees = props.employees;
     let filteredEmployees = employees;
 
@@ -28,7 +27,7 @@ function Table(props) {
   }
 
   return (
-    <table className={`table table-${props.theme}`}>
+    <table className={`table table-bordered table-striped table-${props.theme()}`}>
       <thead>
         <tr>
           <th scope='col'>ID</th>
