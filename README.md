@@ -31,3 +31,5 @@ for breaking up UI components in react.
 <a name="questions"></a><a name="description"></a>
 # Questions
 For any questions, please contact [tkennedy118](http://github.com/tkennedy118).
+
+![](./public/employee-directory.png)
